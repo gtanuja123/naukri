@@ -4,7 +4,7 @@ import path from "node:path"
 
 test("naukri", async({page})=>
 {
-    await page.goto('https://www.naukri.com/mnjuser/homepage?utm_source=google&utm_medium=cpc&utm_campaign=Brand_Login_Register')
+    await page.goto('https://www.naukri.com/nlogin/login?srcTemplate=registerfree468x60&utm_source=google&utm_medium=cpc&utm_campaign=Brand_Login_Register&gclsrc=aw.ds&gad_source=1&gad_campaignid=21008292163&gbraid=0AAAAADLp3cEIrD2rEFkMHiOJQpiwDFHLZ&gclid=EAIaIQobChMIh5DCj8jQlgMV7MA8Ah1ZTSNrEAAYASAAEgIkn_D_BwE')
   await page.waitForTimeout(2000)
 await page.locator('#usernameField').fill("tanuja.girish5@gmail.com")
 await page.locator('#passwordField').fill("Tanu@1234")  
