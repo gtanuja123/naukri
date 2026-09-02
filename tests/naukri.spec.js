@@ -5,9 +5,10 @@ import path from "node:path"
 test("naukri", async({page})=>
 {
     await page.goto('https://www.naukri.com/mnjuser/homepage?utm_source=google&utm_medium=cpc&utm_campaign=Brand_Login_Register')
-  
+  await page.waitForTimeout(2000)
 await page.locator('#usernameField').fill("tanuja.girish5@gmail.com")
 await page.locator('#passwordField').fill("Tanu@1234")  
+await page.waitForTimeout(2000)
 await page.getByRole('button',{type : 'submit'}).nth(2).click()
 await page.waitForTimeout(2000)
 //await page.locator("div[class='crossIcon chatBot chatBot-ic-cross']").click()
