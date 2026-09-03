@@ -31,13 +31,20 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    //trace: 'retain-on-failure',
   },
-
+   
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+       use: {
+        ...devices['Desktop Chrome'],
+        // 4. Use 'new' headless mode which behaves more like a normal browser
+        launchOptions: {
+          args: ['--disable-blink-features=AutomationControlled']
+        }
     },
 
     // {
