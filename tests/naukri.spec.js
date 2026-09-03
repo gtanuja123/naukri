@@ -3,7 +3,7 @@ import { text } from 'node:stream/consumers'
 import path from "node:path"
 
 test("naukri", async ({ page }) => {
-  await page.goto('https://www.naukri.com/nlogin/login?srcTemplate=registerfree468x60&utm_source=google&utm_medium=cpc&utm_campaign=Brand_Login_Register&gclsrc=aw.ds&gad_source=1&gad_campaignid=21008292163&gbraid=0AAAAADLp3cEIrD2rEFkMHiOJQpiwDFHLZ&gclid=EAIaIQobChMIh5DCj8jQlgMV7MA8Ah1ZTSNrEAAYASAAEgIkn_D_BwE')
+  await page.goto('https://www.naukri.com/nlogin/login')
   //await page.waitForTimeout(2000)
   // Wait for the URL network to fully settle before checking elements
   await page.waitForLoadState('networkidle');
