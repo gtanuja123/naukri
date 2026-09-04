@@ -1,4 +1,4 @@
-// import { test } from '@playwright/test'
+import { test } from '@playwright/test'
 // import { text } from 'node:stream/consumers'
 // import path from "node:path"
 
@@ -27,7 +27,7 @@
 
 
 
-const { chromium } = require('playwright-extra');
+//const { chromium } = require('playwright-extra');
 const stealth = require('puppeteer-extra-plugin-stealth')();
 chromium.use(stealth);
 
